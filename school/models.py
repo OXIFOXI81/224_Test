@@ -19,9 +19,6 @@ class Student(models.Model):
                                       # through="Students_tichers")
     group = models.CharField(max_length=10, verbose_name='Класс')
 
-
-
-
     class Meta:
         verbose_name = 'Ученик'
         verbose_name_plural = 'Ученики'
@@ -34,6 +31,6 @@ class Students_tichers(models.Model):
      teacher =models.ForeignKey(Teacher, on_delete=models.CASCADE)
 
      def __str__(self):
-         return self.name
+         return f'{self.teacher}_{self.student}'
 
 

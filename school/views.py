@@ -20,3 +20,6 @@ def students_list(request):
     return render(request, template, context)
 
 # def students_tichers_fill():
+#
+#     students_teachers=Students_tichers.objects.create(teacher=teacher,student=student)
+

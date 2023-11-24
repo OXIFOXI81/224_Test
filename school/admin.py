@@ -6,16 +6,16 @@ class Students_tichersInline(admin.TabularInline):
       model=Students_tichers
       extra=3
 
-
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-   # list_display = ['name','group']
+   list_display = ['name']
    # list_filter = ['name']
-   list_display = ['id']
-   # inlines = [Students_tichersInline,]
+   inlines = [Students_tichersInline,]
+
+
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
-    list_display = ['id','name']
-    inlines = [Students_tichersInline, ]
+    list_display = ['name']
+
 
 
